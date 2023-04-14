@@ -25,7 +25,7 @@ public class ConditionalOnPropertyIntegrationTest {
                     SystemProfile systemProfile = context.getBean(DevProfile.class);
                     assertThat(systemProfile.getProfile()).isEqualTo("Current profile is dev");
                     assertThat(context).doesNotHaveBean("prodProfile");
-                
+                    
                 });
     }
     
@@ -38,7 +38,7 @@ public class ConditionalOnPropertyIntegrationTest {
                     SystemProfile systemProfile = context.getBean(ProductionProfile.class);
                     assertThat(systemProfile.getProfile()).isEqualTo("Current profile is production");
                     assertThat(context).doesNotHaveBean("devProfile");
-                
+                    
                 });
     }
     
